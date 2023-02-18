@@ -1,28 +1,30 @@
 #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of two two-digit numbers,
- *        ranging from 0-99, separated by a comma followed by a space.
+ * main - Prints all possible combinations of three digits in ascending order.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    int num1, num2;
-    int comma = 44;  // ASCII code for comma character
-    int space = 32;  // ASCII code for space character
+    int i, j, k;
 
-    for (num1 = 0; num1 <= 98; num1++)
+    for (i = 0; i <= 7; i++)
     {
-        for (num2 = num1 + 1; num2 <= 99; num2++)
+        for (j = i + 1; j <= 8; j++)
         {
-            putchar((num1 / 10) + '0');
-            putchar((num1 % 10) + '0');
-            putchar(space);
-            putchar((num2 / 10) + '0');
-            putchar((num2 % 10) + '0');
-            putchar(comma);
-            putchar(space);
+            for (k = j + 1; k <= 9; k++)
+            {
+                putchar((i % 10) + '0');
+                putchar((j % 10) + '0');
+                putchar((k % 10) + '0');
+
+                if (i == 7 && j == 8 && k == 9)
+                    continue;
+
+                putchar(',');
+                putchar(' ');
+            }
         }
     }
 
