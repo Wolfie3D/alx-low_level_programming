@@ -1,31 +1,37 @@
-nclude <stdio.h>
+#include <stdio.h>
+
+/**
+ * main - Prints all possible combinations of two two-digit numbers,
+ * ranging from 0-99, separated by a comma followed by a space.
+ *
+ * Return: Always 0.
+ */
 
 int main(void)
 {
-    int num1, num2;
-    char output[600] = ""; // allocate a character array to hold the output string
+	char output[600] = "";
 
-    for (num1 = 0; num1 <= 98; num1++)
-    {
-        for (num2 = num1 + 1; num2 <= 99; num2++)
-        {
-            // build the output string by appending each digit and separator
-            output[strlen(output)] = (num1 / 10) + '0';
-            output[strlen(output)] = (num1 % 10) + '0';
-            output[strlen(output)] = ' ';
-            output[strlen(output)] = (num2 / 10) + '0';
-            output[strlen(output)] = (num2 % 10) + '0';
+	for (num1 = 0; num1 <= 98; num1++)
+	{
+		for (num2 = num1 + 1; num2 <= 99; num2++)
+		{
 
-            if (num1 == 98 && num2 == 99) {
-                // do not add a comma after the last pair of numbers
-            } else {
-                output[strlen(output)] = ',';
-                output[strlen(output)] = ' ';
-            }
-        }
-    }
+			output[strlen(output)] = (num1 / 10) + '0';
+			output[strlen(output)] = (num1 % 10) + '0';
+			output[strlen(output)] = ' ';
+			output[strlen(output)] = (num2 / 10) + '0';
+			output[strlen(output)] = (num2 % 10) + '0';
 
-    printf("%s\n", output); // print the whole output string using a single printf call
+			if (num1 == 98 && num2 == 99) {
 
-    return 0;
+			} else {
+				output[strlen(output)] = ',';
+				output[strlen(output)] = ' ';
+			}
+		}
+	}
+
+	printf("%s\n", output);
+
+	return 0;
 }
