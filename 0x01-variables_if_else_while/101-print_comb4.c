@@ -2,36 +2,29 @@
 
 /**
  * main - Prints all possible combinations of two two-digit numbers,
- * ranging from 0-99, separated by a comma followed by a space.
+ *ranging from 0-99, separated by a comma followed by a space.
  *
  * Return: Always 0.
  */
-
 int main(void)
 {
-	char output[600] = "";
+	int num1, num2;
+	char separator[] = ", ";
 
 	for (num1 = 0; num1 <= 98; num1++)
 	{
 		for (num2 = num1 + 1; num2 <= 99; num2++)
 		{
-
-			output[strlen(output)] = (num1 / 10) + '0';
-			output[strlen(output)] = (num1 % 10) + '0';
-			output[strlen(output)] = ' ';
-			output[strlen(output)] = (num2 / 10) + '0';
-			output[strlen(output)] = (num2 % 10) + '0';
-
-			if (num1 == 98 && num2 == 99) {
-
-			} else {
-				output[strlen(output)] = ',';
-				output[strlen(output)] = ' ';
-			}
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
+			printf("%s", separator);
 		}
 	}
 
-	printf("%s\n", output);
+	putchar('\n');
 
-	return 0;
+	return (0);
 }
