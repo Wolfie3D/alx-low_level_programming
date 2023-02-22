@@ -1,6 +1,12 @@
 #include <stdio.h>
 
+/**
+ * main - prints the first 98 Fibonacci numbers
+ * Return: Always 0
+ */
+
 int main(void)
+
 {
 int i, first = 1, second = 2, next;
 
@@ -19,5 +25,5 @@ second = next;
 
 printf("\n");
 
-return 0;
+return (0);
 }
