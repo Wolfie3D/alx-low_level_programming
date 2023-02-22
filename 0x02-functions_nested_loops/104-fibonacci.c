@@ -5,8 +5,6 @@
 * Return: Always 0
 */
 
-nclude <stdio.h>
-
 int main(void)
 {
 int i;
