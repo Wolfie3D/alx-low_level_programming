@@ -18,5 +18,5 @@ sum += i; /* Add i to the sum */
 
 printf("%d\n", sum); /* Print the sum */
 
-return 0;
+return (0);
 }
