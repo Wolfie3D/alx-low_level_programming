@@ -6,14 +6,13 @@
 *Return: 1 if upper, 0 other
 */
 
-int _isupper(int c)
+int main(void)
 {
-char alpha;
-for (alpha = 'A'; alpha <= 'Z'; alpha++)
-{
-if (c == alpha)
-return (1);
-}
+char c;
 
+c = 'A';
+printf("%c: %d\n", c, _isupper(c));
+c = 'a';
+printf("%c: %d\n", c, _isupper(c));
 return (0);
 }
