@@ -1,11 +1,11 @@
-#include <stdio.h>
 #include "main.h"
-/**
-* _isupper - checks for uppercase character
-*@c: int
-*Return: 1 if upper, 0 other
-*/
+#include <stdio.h>
 
+/**
+* main - check the code for Holberton School students.
+*
+* Return: Always 0.
+*/
 int main(void)
 {
 char c;
