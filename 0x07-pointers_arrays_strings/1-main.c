@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -30,7 +30,7 @@ void simple_print_buffer(char *buffer, unsigned int size)
 }
 
 /**
- * main - check the code for ALX School students.
+ * main - check the code
  *
  * Return: Always 0.
  */
@@ -42,6 +42,6 @@ int main(void)
     simple_print_buffer(buffer, 98);
     _memcpy(buffer + 50, buffer2, 10);
     printf("-------------------------------------------------\n");
-    simple_print_buffer(buffer, 98);
+    simple_print_buffer(buffer, 98);    
     return (0);
 }

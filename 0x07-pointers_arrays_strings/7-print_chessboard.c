@@ -1,29 +1,20 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_chessboard - prints the chess board
- *
- * @a: input pointer
- *
- * Return: return nothing
+* print_chessboard - print chessboard given set 2D array
+* @a: 2D array
 */
 
 void print_chessboard(char (*a)[8])
 {
-	int i, j;
 
-	i = 0;
-	j = 0;
-	while (i < 64)
-	{
-		if (i % 8 == 0 && i != 0)
-		{
-			j = i;
-			_putchar('\n');
-		}
+int row;
+int column;
 
-		_putchar(a[i / 8][i - j]);
-		i++;
-	}
-	_putchar('\n');
+for (row = 0; row < 8; row++)
+{
+for (column = 0; column < 8; column++)
+_putchar(a[row][column]);
+_putchar('\n');
+}
 }
